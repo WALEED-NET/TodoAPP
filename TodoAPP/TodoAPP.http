@@ -1,6 +1,39 @@
-@TodoAPP_HostAddress = http://localhost:5248
+@TodoAPP_HostAddress = https://localhost:7094
 
 GET {{TodoAPP_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+### Create a new Todo
+POST {{TodoAPP_HostAddress}}/api/todo
+Content-Type: application/json
+
+{
+  "title": "Buy groceries",
+  "description": "Milk, eggs, bread",
+  "priority": 1
+}
+
+### Get a Todo by ID
+GET {{TodoAPP_HostAddress}}/api/todo/2
+
+### Get all Todos
+GET {{TodoAPP_HostAddress}}/api/todo
+
+### Update a Todo
+PUT {{TodoAPP_HostAddress}}/api/todo/1
+Content-Type: application/json
+
+{
+  "title": "Buy groceries and fruits",
+  "description": "Milk, eggs, bread, apples",
+  "priority": 2,
+  "isCompleted": false
+}
+
+### Delete a Todo
+DELETE {{TodoAPP_HostAddress}}/api/todo/1
+
+### Toggle status of a Todo
+POST {{TodoAPP_HostAddress}}/api/todo/1/toggle-status

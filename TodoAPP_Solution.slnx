@@ -1,5 +1,5 @@
 <Solution>
   <Project Path="TodoAPP.Core/TodoAPP.Core.csproj" />
   <Project Path="TodoAPP.Infrastructure/TodoAPP.Infrastructure.csproj" />
-  <Project Path="TodoAPP/TodoAPP.csproj" />
+  <Project Path="TodoAPP/TodoAPP.API.csproj" />
 </Solution>
